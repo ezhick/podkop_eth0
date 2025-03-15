@@ -27,8 +27,8 @@ start_service() {
         printf "\033[31;1mDetected https-dns-proxy. Disable or uninstall it for correct functionality.\033[0m\n"
     fi
 
-    if ! ip addr | grep -q "br-lan"; then
-        echo "Interface br-lan not found"
+    if ! ip addr | grep -q "eth0"; then
+        echo "Interface eth0 not found"
         exit 1
     fi
 
